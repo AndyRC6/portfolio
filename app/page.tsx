@@ -6,7 +6,7 @@ function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-const steps = [
+const steps: any[] = [
   {
     name: '[Your company name]',
     time: 'TBD', description: [],
@@ -51,9 +51,9 @@ const steps = [
   }
 ]
 
-const statuses = { expert: 'text-green-400 bg-green-400/10', proficient: 'text-yellow-200 bg-yellow-200/10', inProgress: 'text-orange-400 bg-orange-400/10' }
+const statuses: any = { expert: 'text-green-400 bg-green-400/10', proficient: 'text-yellow-200 bg-yellow-200/10', inProgress: 'text-orange-400 bg-orange-400/10' }
 
-const skills = [
+const skills: any[] = [
   {
     name: 'React',
     level: 'expert',
@@ -463,7 +463,7 @@ export default function Home() {
                           <span className="text-sm text-gray-500">
                             <ul className="list-disc pl-4">
                               {
-                                step.description.map((item, index) => {
+                                step.description.map((item: any, index: any) => {
                                   return (<li key={`${step.name}_${index}`}>{item}</li>)
                                 })
                               }
@@ -489,7 +489,7 @@ export default function Home() {
                           <span className="text-sm text-gray-500">
                             <ul className="list-disc pl-4">
                               {
-                                step.description.map((item, index) => {
+                                step.description.map((item: any, index: any) => {
                                   return (<li key={`${step.name}_${index}`}>{item}</li>)
                                 })
                               }
@@ -515,7 +515,7 @@ export default function Home() {
                           <span className="text-sm text-gray-500 pl-4">
                             <ul className="list-disc">
                               {
-                                step.description.map((item, index) => {
+                                step.description.map((item: any, index: any) => {
                                   return (<li key={`${step.name}_${index}`}>{item}</li>)
                                 })
                               }
@@ -631,7 +631,7 @@ export default function Home() {
             </div>
             <div className="flex p-px lg:col-span-4">
               <div className="w-full overflow-hidden rounded-lg bg-gray-800 outline outline-white/15 max-lg:rounded-b-4xl lg:rounded-br-4xl">
-                <video controls="controls" width="800" height="300" name="ghosttown_app" className={'h-80 w-full'}>
+                <video width="800" height="300" className={'h-80 w-full'}>
                   <source src="/videos/ghosttown_app.mov" />
                 </video>
 
